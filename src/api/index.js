@@ -183,3 +183,27 @@ export const getGoodsList = (pa) => {
       return result.data
     })
 }
+// 获取所有商品的分类数据
+// categories
+// 请求方法：get
+export const getcategories = (type) => {
+  return axios.get(`categories`, {params: {type: type}})
+    .then((result) => {
+      return result.data
+    })
+}
+// 完成商品新增
+export const addgoods = (pa) => {
+  return axios.post(`goods`, pa)
+    .then((result) => {
+      return result.data
+    })
+}
+
+// 获取分类数据列表
+export const getCategories = (pa) => {
+  return axios.get(`categories`, {params: pa})
+    .then((result) => {
+      return result.data
+    })
+}

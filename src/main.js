@@ -5,13 +5,24 @@ import App from './App'
 // index > index.js > index.json > index.node
 import router from './router/index.js'
 
+import VueAMap from 'vue-amap'
 // 引入element-ui
 import 'element-ui/lib/theme-chalk/index.css'
 
 // 引入index.scss文件
 import '@/styles/index.css'
-
+import ECharts from 'vue-echarts'
 import ElementUI from 'element-ui'
+import VueQuillEditor from 'vue-quill-editor'
+
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
+Vue.use(VueQuillEditor)
+Vue.component('chart', ECharts)
+Vue.use(VueAMap)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
